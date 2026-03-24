@@ -8,12 +8,11 @@ const TodoForm = ({addTask}) => {
       let newTask = {
         id: Math.trunc(Math.random() * 100),
         name: task,
-        checked: false,
+        isChecked: false,
       };
     //   setTask((prev) => [...prev, newTask]);
       addTask(newTask);
             setTask("");
-
     }
   }
 

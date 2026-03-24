@@ -19,6 +19,8 @@ import UncontrolledFormHandling from "./components/UncontrolledFormHandling";
 import Profile from "./components/Profile";
 import ParentChildInput from "./components/ParentChildInput";
 import TodoApp from "./components/TodoApp";
+import LoginLogoutToggle from "./components/LoginLogoutToggle";
+import BookApp from "./components/BookApp";
 
 
 function App() {
@@ -88,7 +90,13 @@ function App() {
       {/* <ParentChildInput/> */}
 
       {/*------------------ todo list -------------------*/}
-      <TodoApp/>
+      {/* <TodoApp/> */}
+
+      {/* ----------------------login logout toggle ---------------- */}
+      {/* <LoginLogoutToggle/> */}
+
+      {/* ----------------Book app---------------- */}
+      <BookApp/>
      
     </div>
   );

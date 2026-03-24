@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoDisplay = ({ tasks,deleteTask }) => {
+const TodoDisplay = ({ tasks,deleteTask,handleToggle }) => {
  
   return (
     <div className="flex flex-col justify-center items-center mt-5">
@@ -15,8 +15,8 @@ const TodoDisplay = ({ tasks,deleteTask }) => {
                     key={task.id}
                   >
                     <div>
-                      <input type="checkbox" className="mr-2" />
-                      {task.name}
+                      <input type="checkbox" checked={task.isChecked} className="mr-2"/>
+                      <span className={`h4 ml-2 ${task.isChecked?'':''}`}>{task.name}</span>
                     </div>
                     <button className="btn text-2xl text-red-600 cursor-pointer" onClick={()=>deleteTask(task.id)}>
                       X
