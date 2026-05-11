@@ -21,7 +21,31 @@ import ParentChildInput from "./components/ParentChildInput";
 import TodoApp from "./components/TodoApp";
 import LoginLogoutToggle from "./components/LoginLogoutToggle";
 import BookApp from "./components/BookApp";
-
+import LightDark from "./components/LightDark";
+import About from "./components/About";
+import ThemeContext from "./utils/ThemeContext";
+import Dashboard from "./components/Dashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar2 from "./components/Navbar2";
+import PageNotFound from "./components/PageNotFound";
+import Settings from "./components/Settings";
+import UseEffect from "./components/UseEffect";
+import CompA from "./components/hoc/CompA";
+import CompB from "./components/hoc/CompB";
+import UseRef from "./components/useref/UseRef";
+import VideoReference from "./components/useref/VideoReference";
+import UncontrolledForm from "./components/forms/UncontrolledForm";
+import ControlledForm from "./components/forms/ControlledForm";
+import ControlledForm2 from "./components/forms/ControlledForm2";
+import LifecycleParent from "./lifecyclemethods/LifecycleParent";
+import UseEffectParent from "./useEffect/UseEffectParent";
+import UseEffectParent2 from "./useEffect/UseEffectParent2";
+import UseEffect3 from "./useEffect/UseEffect3";
+import ApiCallAxios from "./useEffect/ApiCallAxios";
+import UseMemo from "./components/usememo/UseMemo";
+import UseCallback from "./components/usecallback/UseCallback";
+import ChildrenPropsParent from "./childrenProps/ChildrenPropsParent";
+import TaskParentChildrenProps from "./task/childrenprop/TaskParentChildrenProps";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -37,13 +61,17 @@ function App() {
     { name: "jeans", id: 101, price: 1234, qty: 0, rating: 4.3 },
   ];
 
-
   const [userList, setUserList] = useState(user);
   const [productList, setProductList] = useState(productListArray);
+  const [isLogin, setIsLogin] = useState(false);
+
+  function handleLogin() {
+    setIsLogin(!isLogin);
+  }
 
   return (
     <div>
-      <Navbar userList={userList} />
+      {/* <Navbar userList={userList} isLogin={isLogin} /> */}
       {/*------------------ list rendering -------------------*/}
       {/* <ListRender/> */}
 
@@ -69,6 +97,9 @@ function App() {
       {/*------------------ children props - making modal comp reusable for multi comp -------------------*/}
       {/* <Modal><Success/></Modal> */}
       {/* <Modal><Error1/></Modal> */}
+      {/* <ChildrenPropsParent/> */}
+      <TaskParentChildrenProps/>
+      
 
       {/*------------------ using map on props -------------------*/}
       {/* <Profile/> */}
@@ -82,9 +113,12 @@ function App() {
       {/*------------------ controlled form handling -------------------*/}
       {/* <FormHandling/> */}
       {/* <FormHandling2/> */}
+      {/* <ControlledForm/> */}
+      {/* <ControlledForm2/> */}
 
       {/*------------------ uncontrolled form handling -------------------*/}
       {/* <UncontrolledFormHandling /> */}
+      {/* <UncontrolledForm/> */}
 
       {/*------------------ input child to parent vice verse form handling -------------------*/}
       {/* <ParentChildInput/> */}
@@ -96,8 +130,63 @@ function App() {
       {/* <LoginLogoutToggle/> */}
 
       {/* ----------------Book app---------------- */}
-      <BookApp/>
-     
+      {/* <BookApp/> */}
+
+      {/* -------------light dark theme ------------------- */}
+      {/* <LightDark/> */}
+
+      {/* -------------------context API--------------------- */}
+      {/* <ThemeContext.Provider value={{isLogin, handleLogin}}>
+        <Navbar userList={userList} />
+        <Home />
+        <About />
+      </ThemeContext.Provider> */}
+
+      {/* -----------------Routing-------------------------- */}
+
+      {/* <BrowserRouter>
+        <Navbar2 />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter> */}
+
+
+      {/* -----------------use effect ----------------- */}
+
+      {/* <UseEffect/> */}
+      {/* <UseEffectParent/> */}
+      {/* <UseEffectParent2/> */}
+      {/* <UseEffect3/> */}
+
+      {/* -----------API CALL-------------- */}
+      {/* <ApiCallAxios/> */}
+
+      {/* ------------HOC------------ */}
+      {/* <CompA/>
+      <CompB/> */}
+
+      {/* ------------useRef ------------------ */}
+      {/* <UseRef/> */}
+      {/* <VideoReference/> */}
+
+
+      {/* --------------lifecycle------ */}
+      {/* <LifecycleParent/> */}
+
+      {/* -------------------useMemo---------------- */}
+      {/* <UseMemo/> */}
+
+      {/* ------------useCallBAck------------- */}
+      {/* <UseCallback/> */}
+
+
     </div>
   );
 }

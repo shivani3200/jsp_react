@@ -1,5 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
+import Settings from "./Settings";
+import { NavLink } from "react-router-dom";
 
 const Dashboard = ({ userList }) => {
   return (
@@ -9,6 +11,7 @@ const Dashboard = ({ userList }) => {
       <div className="flex-1">
         <Profile userList={userList} />
       </div>
+      
     </div>
   );
 };

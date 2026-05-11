@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "./Button";
+import ThemeContext from "../utils/ThemeContext";
 
 function Navbar({ userList, taskList }) {
+
+  let {isLogin} = useContext(ThemeContext);
+
+
   return (
     <nav className="bg-blue-600 text-white flex justify-between items-center px-6 py-3 shadow-md">
       <div className="text-xl font-bold">MyApp</div>
@@ -12,6 +17,8 @@ function Navbar({ userList, taskList }) {
         <Button text={"total task"} color="bg-yellow-500">
           {taskList}
         </Button>
+
+        <Button>{isLogin?"Logout":"Login"}</Button>
       </div>
     </nav>
   );
