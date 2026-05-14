@@ -1,7 +1,7 @@
 import React from 'react'
 import Dashboard from './Dashboard'
 
-const Home = ({userList}) => {
+const  Home = ({userList}) => {
 
   return (
     <div className='flex justify-center items-center h-screen'>

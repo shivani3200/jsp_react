@@ -46,6 +46,10 @@ import UseMemo from "./components/usememo/UseMemo";
 import UseCallback from "./components/usecallback/UseCallback";
 import ChildrenPropsParent from "./childrenProps/ChildrenPropsParent";
 import TaskParentChildrenProps from "./task/childrenprop/TaskParentChildrenProps";
+import Message from "./eventHandling/Message";
+import EventHandlingCounter from "./eventHandling/EventHandlingCounter";
+import Products from "./useState/Products";
+import PropsDrillingParent from "./propsDrilling/PropsDrillingParent";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -90,15 +94,17 @@ function App() {
       {/* <Counter/> */}
       {/* <EvenOddColorChange/> */}
       {/* <RandomColorBG/> */}
+      {/* <Products productListArray={productListArray}/> */}
 
       {/*------------------ props drilling -------------------*/}
       {/* <Home userList={userList} /> */}
+      <PropsDrillingParent/>
 
       {/*------------------ children props - making modal comp reusable for multi comp -------------------*/}
       {/* <Modal><Success/></Modal> */}
       {/* <Modal><Error1/></Modal> */}
       {/* <ChildrenPropsParent/> */}
-      <TaskParentChildrenProps/>
+      {/* <TaskParentChildrenProps/> */}
       
 
       {/*------------------ using map on props -------------------*/}
@@ -185,6 +191,10 @@ function App() {
 
       {/* ------------useCallBAck------------- */}
       {/* <UseCallback/> */}
+
+      {/* -----------event handling--------------- */}
+      {/* <Message/> */}
+      {/* <EventHandlingCounter/> */}
 
 
     </div>
