@@ -50,6 +50,7 @@ import Message from "./eventHandling/Message";
 import EventHandlingCounter from "./eventHandling/EventHandlingCounter";
 import Products from "./useState/Products";
 import PropsDrillingParent from "./propsDrilling/PropsDrillingParent";
+import TodoAppParent from "./todoApp/TodoAppParent";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -98,7 +99,7 @@ function App() {
 
       {/*------------------ props drilling -------------------*/}
       {/* <Home userList={userList} /> */}
-      <PropsDrillingParent/>
+      {/* <PropsDrillingParent/> */}
 
       {/*------------------ children props - making modal comp reusable for multi comp -------------------*/}
       {/* <Modal><Success/></Modal> */}
@@ -131,6 +132,7 @@ function App() {
 
       {/*------------------ todo list -------------------*/}
       {/* <TodoApp/> */}
+      <TodoAppParent/>
 
       {/* ----------------------login logout toggle ---------------- */}
       {/* <LoginLogoutToggle/> */}
