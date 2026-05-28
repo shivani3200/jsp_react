@@ -52,6 +52,8 @@ import Products from "./useState/Products";
 import PropsDrillingParent from "./propsDrilling/PropsDrillingParent";
 import TodoAppParent from "./todoApp/TodoAppParent";
 import RoutingParent from "./Routing/RoutingParent";
+import Syntax from "./classBasedComponents/Syntax";
+import ClassParent from "./classBasedComponents/ClassParent";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -107,7 +109,6 @@ function App() {
       {/* <Modal><Error1/></Modal> */}
       {/* <ChildrenPropsParent/> */}
       {/* <TaskParentChildrenProps/> */}
-      
 
       {/*------------------ using map on props -------------------*/}
       {/* <Profile/> */}
@@ -166,8 +167,7 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-      <RoutingParent/>
-
+      {/* <RoutingParent/> */}
 
       {/* -----------------use effect ----------------- */}
 
@@ -187,7 +187,6 @@ function App() {
       {/* <UseRef/> */}
       {/* <VideoReference/> */}
 
-
       {/* --------------lifecycle------ */}
       {/* <LifecycleParent/> */}
 
@@ -201,7 +200,9 @@ function App() {
       {/* <Message/> */}
       {/* <EventHandlingCounter/> */}
 
-
+      {/* ------------------class based component------------------- */}
+      {/* <Syntax /> */}
+      <ClassParent/>
     </div>
   );
 }
