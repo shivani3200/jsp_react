@@ -51,6 +51,7 @@ import EventHandlingCounter from "./eventHandling/EventHandlingCounter";
 import Products from "./useState/Products";
 import PropsDrillingParent from "./propsDrilling/PropsDrillingParent";
 import TodoAppParent from "./todoApp/TodoAppParent";
+import RoutingParent from "./Routing/RoutingParent";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -132,7 +133,7 @@ function App() {
 
       {/*------------------ todo list -------------------*/}
       {/* <TodoApp/> */}
-      <TodoAppParent/>
+      {/* <TodoAppParent/> */}
 
       {/* ----------------------login logout toggle ---------------- */}
       {/* <LoginLogoutToggle/> */}
@@ -164,6 +165,8 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter> */}
+
+      <RoutingParent/>
 
 
       {/* -----------------use effect ----------------- */}

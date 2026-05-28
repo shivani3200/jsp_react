@@ -31,11 +31,20 @@ const BookInput = ({ handleAddName }) => {
             onChange={(e) => setAuthor(e.target.value)}
             className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <button 
+
+          <div className="flex justify-between gap-4">
+<button 
              onClick={handleAdd} 
-             className="self-center bg-blue-600 text-white rounded-lg py-2 px-32  hover:bg-blue-800 transition duration-200">
+             className="self-center bg-blue-600 text-white rounded-lg py-2 px-12  hover:bg-blue-800 transition duration-200">
             Add
           </button>
+           <button 
+             onClick={handleAdd} 
+             className="self-center bg-green-300 text-white rounded-lg py-2 px-12  hover:bg-green-500 transition duration-200">
+            Read
+          </button>
+          </div>
+          
         </div>
       </div>
     </>
