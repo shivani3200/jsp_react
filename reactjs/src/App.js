@@ -55,6 +55,7 @@ import RoutingParent from "./Routing/RoutingParent";
 import Syntax from "./classBasedComponents/Syntax";
 import ClassParent from "./classBasedComponents/ClassParent";
 import UseEffectProducts from "./useEffect/UseEffectProducts";
+import UseEffectRoutingParent from "./task/useEffectRouting/UseEffectRoutingParent";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -176,7 +177,8 @@ function App() {
       {/* <UseEffectParent/> */}
       {/* <UseEffectParent2/> */}
       {/* <UseEffect3/> */}
-      <UseEffectProducts/>
+      {/* <UseEffectProducts/> */}
+      <UseEffectRoutingParent/>
 
       {/* -----------API CALL-------------- */}
       {/* <ApiCallAxios/> */}
