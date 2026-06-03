@@ -56,6 +56,7 @@ import Syntax from "./classBasedComponents/Syntax";
 import ClassParent from "./classBasedComponents/ClassParent";
 import UseEffectProducts from "./useEffect/UseEffectProducts";
 import UseEffectRoutingParent from "./task/useEffectRouting/UseEffectRoutingParent";
+import Toggle from "./useEffect/Toggle";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -178,8 +179,12 @@ function App() {
       {/* <UseEffectParent2/> */}
       {/* <UseEffect3/> */}
       {/* <UseEffectProducts/> */}
-      <UseEffectRoutingParent/>
+      {/* <UseEffectRoutingParent/> */}
 
+      {/* ----------clear interval, unmouting---------- */}
+      <Toggle/>
+
+      
       {/* -----------API CALL-------------- */}
       {/* <ApiCallAxios/> */}
 

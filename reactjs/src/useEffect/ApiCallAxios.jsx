@@ -9,7 +9,7 @@ const ApiCallAxios = () => {
     setUser(data); //passing and storing data in state
   };
 
-  //fetching data feom server ,[] ->execute once
+  //fetching data from server ,[] ->execute once
 
   useEffect(() => {
     try {
