@@ -57,6 +57,7 @@ import ClassParent from "./classBasedComponents/ClassParent";
 import UseEffectProducts from "./useEffect/UseEffectProducts";
 import UseEffectRoutingParent from "./task/useEffectRouting/UseEffectRoutingParent";
 import Toggle from "./useEffect/Toggle";
+import UseReducerCounter from "./useReducer/UseReducerCounter";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -182,7 +183,7 @@ function App() {
       {/* <UseEffectRoutingParent/> */}
 
       {/* ----------clear interval, unmouting---------- */}
-      <Toggle/>
+      {/* <Toggle/> */}
 
       
       {/* -----------API CALL-------------- */}
@@ -195,6 +196,9 @@ function App() {
       {/* ------------useRef ------------------ */}
       {/* <UseRef/> */}
       {/* <VideoReference/> */}
+
+      {/* ---------useReducer----------- */}
+      <UseReducerCounter/>
 
       {/* --------------lifecycle------ */}
       {/* <LifecycleParent/> */}
