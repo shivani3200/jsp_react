@@ -1,7 +1,8 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
 import CountReducer from './CountReducer'
 
 const UseReducerCounter = () => {
+  const [input, setInput] = useState();
     let initialState = {count:0}
 
     const [counter, dispatch] = useReducer(CountReducer,initialState);
@@ -10,10 +11,13 @@ const UseReducerCounter = () => {
     <h1 className='text-xl'>Count App</h1>
     <h1 className='text-xl'>Count:{counter.count}</h1>
 
+    <input type='text' value={input} onChange={(e)=>setInput(e.target.value)}/>
+
     <button onClick={()=>{dispatch({type:'INCBY1'})}} className='bg-yellow-400 px-4 py-1 m-2'>+1</button>
     <button onClick={()=>{dispatch({type:'INCBY2'})}} className='bg-pink-400 px-4 py-1 m-2'>+2</button>
     <button onClick={()=>{dispatch({type:'INCBY5'})}} className='bg-green-400 px-4 py-1 m-2'>+5</button>
     <button onClick={()=>{dispatch({type:'INCBY10'})}} className='bg-blue-400 px-4 py-1 m-2'>+10</button>
+    <button onClick={()=>{dispatch({type:'INCBY', payload:Number(input)})}} className='bg-blue-400 px-4 py-1 m-2'>input</button>
     <button onClick={()=>{dispatch({type:'RESET'})}} className='bg-red-400 px-4 py-1 m-2'>Reset</button>
 
     </>

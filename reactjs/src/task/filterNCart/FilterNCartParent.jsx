@@ -1,19 +1,18 @@
 import React from "react";
-
-import { BrowserRoute, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FilterNCartNavbar from "./FilterNCartNavbar";
+import FilterNCartHome from "./FilterNCartHome";
+import AddtoCartCard from "./AddtoCartCard";
 
 const FilterNCartParent = () => {
   return (
-    <>
-      <BrowserRoute>
-      <FilterNCartNavbar/>
-        <Routes>
-          <Route path="/">Home</Route>
-          <Route path="cart">Cart</Route>
-        </Routes>
-      </BrowserRoute>
-    </>
+    <BrowserRouter>
+      <FilterNCartNavbar />
+      <Routes>
+        <Route path="/" element={<FilterNCartHome/>} />
+        <Route path="/cart" element={<AddtoCartCard/>} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

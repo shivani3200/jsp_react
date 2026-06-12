@@ -11,4 +11,4 @@ const Child = ({handleGetData}) => {
   </div>;
 };
 
-export default Child;
+export default Child; 

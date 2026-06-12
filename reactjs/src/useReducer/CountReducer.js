@@ -8,6 +8,10 @@ function CountReducer(state, action) {
       return { count: state.count + 5 };
     case "INCBY10":
       return { count: state.count + 10 };
+    case 'INCBY':
+        return {
+            count:state.count + action.payload
+        }
     case 'RESET':
       return {count:0}
     default:

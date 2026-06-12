@@ -10,7 +10,7 @@ function Parent() {
     }
   return (
     <div>
-        <h1>parent</h1>
+        <h1>parent</h1> 
         <h1>{city}</h1>
         <div>
             <Child handleGetData={handleGetData}/>

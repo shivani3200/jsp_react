@@ -58,6 +58,11 @@ import UseEffectProducts from "./useEffect/UseEffectProducts";
 import UseEffectRoutingParent from "./task/useEffectRouting/UseEffectRoutingParent";
 import Toggle from "./useEffect/Toggle";
 import UseReducerCounter from "./useReducer/UseReducerCounter";
+import FilterNCartParent from "./task/filterNCart/FilterNCartParent";
+import ReduxCounter from "./redux/component/ReduxCounter";
+import UseNavigateParent from "./useNavigate/UseNavigateParent";
+import LoginPageParent from "./task/LoginPage/LoginPageParent";
+import User from "./reduxToolkit/components/User";
 
 function App() {
   let s1 = { name: "Alex", age: 23, hobby: "music" };
@@ -198,7 +203,7 @@ function App() {
       {/* <VideoReference/> */}
 
       {/* ---------useReducer----------- */}
-      <UseReducerCounter/>
+      {/* <UseReducerCounter/> */}
 
       {/* --------------lifecycle------ */}
       {/* <LifecycleParent/> */}
@@ -209,6 +214,9 @@ function App() {
       {/* ------------useCallBAck------------- */}
       {/* <UseCallback/> */}
 
+      {/* ----------useNavigate------------- */}
+      {/* <UseNavigateParent/> */}
+
       {/* -----------event handling--------------- */}
       {/* <Message/> */}
       {/* <EventHandlingCounter/> */}
@@ -216,6 +224,18 @@ function App() {
       {/* ------------------class based component------------------- */}
       {/* <Syntax /> */}
       {/* <ClassParent/> */}
+
+      {/* --------------fliter n cart------------- */}
+      {/* <FilterNCartParent/> */}
+
+
+      {/* -----------REDUX------------ */}
+      {/* <ReduxCounter/> */}
+      <User/>
+
+      {/* -------------task----------- */}
+      {/* <LoginPageParent/> */}
+
     </div>
   );
 }
